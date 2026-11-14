@@ -14,6 +14,15 @@ Configure a system user account with shell access disabled. This type of account
 
 ---
 
+## my solution:
+```bash
+ssh ubuntu@ip
+sudo useradd -m -s /usr/sbin/nologin user_name
+cat /etc/passwd
+## test
+sudo su - user_name
+```
+---
 ## Solution Steps
 
 **Step 1:** Connect to the application server via SSH
