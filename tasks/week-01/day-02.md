@@ -12,6 +12,19 @@ Establish a time-limited user account with automatic expiration. This approach s
 
 **Lab:** [KodeKloud Engineer Platform](https://engineer.kodekloud.com/practice)
 
+
+---
+## my solution
+#### create an account that will expire on 2026-11-20
+```bash
+sudo useradd -m -e 2026-11-20 temp_user
+```
+#### verify
+```bash
+sudo grep temp_user /etc/shadow
+sudo chage -l temp_user
+```
+---
 ---
 
 ## Solution Steps
