@@ -13,6 +13,23 @@ Disable direct root login via SSH on all application servers to enhance security
 **Lab:** [KodeKloud Engineer Platform](https://engineer.kodekloud.com/practice)
 
 ---
+---
+## my solution
+```bash
+sudo cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak.`date +%F` 
+
+sudo vi /etc/ssh/sshd_config
+```
+```vim
+PermitRootLogin no
+```
+
+```bash
+sudo systemctl restart sshd.service
+sudo systemctl status sshd.service
+```
+---
+---
 
 ## Solution Steps
 
